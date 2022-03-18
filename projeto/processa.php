@@ -28,8 +28,8 @@ if(!empty($dados['CadUsuario'])){
     $id_usuario = $conn->lastInsertId();
 
     $query_telefone= "INSERT INTO telefone 
-                (usuario_id, telefone  ) VALUES 
-                ( :usuario_id, telefone )";
+                (idpessoa, telefone  ) VALUES 
+                ( :usuario_id, :telefone )";
     $cad_telefone = $conn->prepare($query_telefone);
     $cad_telefone->bindParam(':usuario_id', $id_usuario, PDO::PARAM_INT);
     $cad_telefone->bindParam(':telefone', $dados['telefone'], PDO::PARAM_STR);
