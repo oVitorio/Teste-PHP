@@ -11,7 +11,7 @@ include_once "conexao.php";
 //Receber os dados do formulario
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-var_dump($dados);
+//var_dump($dados);
 
 //Verificar se o usuario clicou no botao
 if(!empty($dados['CadUsuario'])){
